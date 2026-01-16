@@ -1,0 +1,288 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+/* Navigation */
+nav {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-links {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #c4d82e;
+}
+
+.login-btn {
+    color: #c4d82e;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* upper Section */
+.upper {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+}
+
+.upper-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.upper-content {
+    max-width: 500px;
+}
+
+.logo-container {
+  margin-bottom: 30px;
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+    margin-bottom: 20px;
+  
+}
+
+.upper h1 {
+    font-size: 36px;
+    font-weight: 300;
+    line-height: 1.4;
+  
+    padding: 20px 0;
+    
+}
+
+.upper-slogan {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+   
+   
+   
+}
+
+.slogan-border-atas{
+    width: 430px; 
+    border-bottom: 3px solid #ffffff;
+    margin-left: 190px; 
+    margin-top: -10px; 
+  }
+.slogan-border {
+    width: 430px; 
+    border-bottom: 3px solid #ffffff;
+    margin-left: -40px; 
+    margin-top: -10px; 
+  }
+  
+
+.slogan-text {
+    white-space: nowrap;
+    font-size: 36px;
+    font-weight: 300;
+    line-height: 1.4;
+    color: #ffffff;
+}
+
+
+.contact-info {
+    display: flex;
+  
+   
+   
+    margin-bottom:-640px ;
+}
+
+
+.contact-item {
+    margin-left: 5px;
+    border-radius: 10px;
+    gap: 30px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.contact-icon {
+    width: 40px;
+    height: 40px;
+    background: #c4d82e;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.contact-details h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #c4d82e;
+}
+
+.contact-details p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Products Section */
+.products {
+    padding: 100px 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 50px;
+    max-width: 1400px;
+    margin: 50px auto;
+}
+
+.product-card {
+    background: #2a2a2a;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+}
+
+.product-image {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+   
+}
+
+.product-content {
+    padding: 40px;
+    text-align: center;
+}
+
+.product-logo {
+    width: 120px;
+    margin: 0 auto 30px;
+}
+
+.product-content p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    background: #c4d82e;
+    color: #1a1a1a;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #d4e83e;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 100px 50px;
+    background: #222;
+}
+
+.contact-section h2 {
+    font-size: 32px;
+    margin-bottom: 50px;
+    border-bottom: 2px solid #c4d82e;
+    padding-bottom: 20px;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    max-width: 1200px;
+}
+
+.contact-box h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.contact-box p {
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    nav {
+        padding: 15px 20px;
+    }
+
+    .nav-links {
+        gap: 20px;
+    }
+
+    .upper {
+        flex-direction: column;
+        padding: 100px 20px 50px;
+        text-align: center;
+    }
+
+    .upper h1 {
+        font-size: 28px;
+    }
+
+    .products {
+        grid-template-columns: 1fr;
+        padding: 50px 20px;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+

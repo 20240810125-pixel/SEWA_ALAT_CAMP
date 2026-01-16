@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesanan Masuk - Rimba Shelter</title>
+    <link rel="stylesheet" href="css/style-pesannan-msk.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="logo">
+            <img src="gambar/logo-hitam.png" alt="Rimba Shelter Logo">
+        </div>
+
+        <div class="menu-title">Menu</div>
+        
+        <a href="dashboard-admin.html" class="menu-item">Dashboard</a>
+        <a href="kelola.html" class="menu-item">Kelola Barang</a>
+        <a href="pesanan-masuk.html" class="menu-item active">Pesanan masuk</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="ket">
+            <h2>Pesanan Masuk</h2>
+        </div>
+
+        <!-- Filter Dropdown -->
+        <div class="filter-container">
+            <label for="filterPesanan">Filter Pesanan:</label>
+            <select id="filterPesanan" class="filter-dropdown">
+                <option value="hari-ini">Hari Ini</option>
+                <option value="bulan-ini">Bulan Ini</option>
+                <option value="bulan-lalu">Bulan Lalu</option>
+            </select>
+        </div>
+
+        <!-- Pesanan Hari Ini -->
+        <div class="orderan" id="pesanan-hari-ini">
+            <div class="order-box">
+                <img src="gambar/Borneo-4-c-1.png" alt="Gambar Barang">
+                <div class="order-details">
+                    <span>Username: rizal</span>
+                    <span>Nama: rizaldy</span>
+                    <span>Barang yang dipesan: Tenda dom DL Kapasitas 4</span>
+                    <span>Jumlah: 2</span>
+                    <span>Sewa/hari: 1</span>
+                    <span>Untuk tgl: 20 February 2026</span>
+                    <span>Tgl pemesanan: 17 January 2026</span>
+                    <span>Total harga: 80.000</span>
+                </div>
+            </div>
+
+            <div class="order-box">
+                <img src="gambar/carrir.jpg" alt="Gambar Barang">
+                <div class="order-details">
+                    <span>Username: rizal</span>
+                    <span>Nama: rizaldy</span>
+                    <span>Barang yang dipesan: Carrier 65L</span>
+                    <span>Jumlah: 1</span>
+                    <span>Sewa/hari: 1</span>
+                    <span>Untuk tgl: 20 January 2026</span>
+                    <span>Tgl pemesanan: 17 January 2026</span>
+                    <span>Total harga: 20.000</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pesanan Bulan Ini (Empty) -->
+        <div class="orderan hidden" id="pesanan-bulan-ini">
+            <div class="empty-state">
+                <div class="empty-state-icon">📦</div>
+                <h3>Belum Ada Pesanan</h3>
+                <p>Tidak ada pesanan untuk bulan ini</p>
+            </div>
+        </div>
+
+        <!-- Pesanan Bulan Lalu (Empty) -->
+        <div class="orderan hidden" id="pesanan-bulan-lalu">
+            <div class="empty-state">
+                <div class="empty-state-icon">📦</div>
+                <h3>Belum Ada Pesanan</h3>
+                <p>Tidak ada pesanan untuk bulan lalu</p>
+            </div>
+        </div>
+
+        <footer id="contact" class="contact-section">
+            <h2>Contact Us</h2>
+            <div class="contact-grid">
+                <div class="contact-box">
+                    <h3>Rimba Shelter</h3>
+                    <p>Telepon:<br>0895-0120-7986</p>
+                </div>
+                <div class="contact-box">
+                    <h3>Lokasi :</h3>
+                    <p>Sindang, Kec. Cikijing,<br>Kabupaten Majalengka, Jawa<br>Barat 45466</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/script-pesanan-msk.js"> </script>
+</body>
+</html>
