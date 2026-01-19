@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kelola Barang - Rimba Shelter</title>
+   <link rel="stylesheet" href="css/style-kelola.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="logo">
+            <img src="gambar/logo-hitam.png" alt="Rimba Shelter Logo">
+        </div>
+
+        <div class="menu-title">Menu</div>
+        
+        <a href="dashboard-admin.html" class="menu-item">Dashboard</a>
+        <a href="kelola.html" class="menu-item active">Kelola Barang</a>
+        <a href="pesanan-masuk.html" class="menu-item">Pesanan masuk</a>
+    </div> 
+    <!-- Main Content -->
+    <div class="main-content">
+       
+        <div class="produk">
+            <h1 class="judul-produk">Pilih Barang Yang Ingin Anda Booking:</h1>
+          
+              <!-- Baris pertama: 2 card -->
+              <div class="card-row" id="cardRow"></div>
+          
+              <!-- Baris berikutnya: 3 card per baris -->
+              <div class="card-container" id="cardContainer"></div>
+        </div>
+
+        <div>
+            <div class="card-container" >
+                <button class="tambah" id="btnTambahProduk"> + </button>
+            </div>
+        </div>
+
+
+
+
+
+
+        <footer id="contact" class="contact-section">
+            <h2>Contact Us</h2>
+            <div class="contact-grid">
+                <div class="contact-box">
+                    <h3>Rimba Shelter</h3>
+                    <p>Telepon:<br>0895-0120-7986</p>
+                </div>
+                <div class="contact-box">
+                    <h3>Lokasi :</h3>
+                    <p>Sindang, Kec. Cikijing,<br>Kabupaten Majalengka, Jawa<br>Barat 45466</p>
+                </div>
+    </div>
+
+    
+<!-- Modal Edit Produk -->
+<div id="editModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Edit Produk</h2>
+        <form id="editForm">
+            <div class="form-group">
+                <label>Tambah gambar:</label>
+                <button type="button" class="upload-btn">↑</button>
+                <input type="file" id="productImage" accept="image/*" style="display: none;">
+            </div>
+            
+            <div class="form-group">
+                <label>Masukan nama barang:</label>
+                <input type="text" id="productName" required>
+            </div>
+            
+            <div class="form-group">
+                <label>Masukan harga barang / hari:</label>
+                <input type="number" id="productPrice" required>
+            </div>
+            
+            <div class="form-group">
+                <label>Masukan stok barang:</label>
+                <input type="number" id="productStock" required min="0">
+            </div>
+            
+            <div class="form-actions">
+                <button type="submit" class="btn-save">Simpan</button>
+                <button type="button" class="btn-cancel">Batal</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Modal Konfirmasi Hapus -->
+<div id="deleteModal" class="modal">
+    <div class="modal-content-small">
+        <h3>Konfirmasi Hapus</h3>
+        <p>Apakah Anda yakin akan menghapus produk ini?</p>
+        <div class="form-actions">
+            <button id="confirmDelete" class="btn-delete">Ya, Hapus</button>
+            <button id="cancelDelete" class="btn-cancel">Batal</button>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Tambah Produk Baru -->
+<div id="addModal" class="modal">
+    <div class="modal-content">
+        <span class="close-add">&times;</span>
+        <h2>Tambah Produk Baru</h2>
+        <form id="addForm">
+            <div class="form-group">
+                <label>Tambah gambar:</label>
+                <button type="button" class="upload-btn-add">↑</button>
+                <input type="file" id="newProductImage" accept="image/*" style="display: none;">
+                <span id="selectedFileName" style="margin-left: 10px; font-size: 12px; color: #666;"></span>
+            </div>
+            
+            <div class="form-group">
+                <label>Masukan nama barang:</label>
+                <input type="text" id="newProductName" required>
+            </div>
+            
+            <div class="form-group">
+                <label>Masukan harga barang / hari:</label>
+                <input type="number" id="newProductPrice" required min="0">
+            </div>
+            
+            <div class="form-group">
+                <label>Masukan stok barang:</label>
+                <input type="number" id="newProductStock" required min="0">
+            </div>
+            
+            <div class="form-group">
+                <label>Pilih baris tampilan:</label>
+                <select id="newProductRow">
+                    <option value="rest">Baris Umum (3 card per baris)</option>
+                    <option value="first">Baris Pertama (2 card besar)</option>
+                </select>
+            </div>
+            
+            <div class="form-actions">
+                <button type="submit" class="btn-save">Tambah Produk</button>
+                <button type="button" class="btn-cancel-add">Batal</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+    <script src="js/script-kelola.js"></script>
+</body>
+</html>

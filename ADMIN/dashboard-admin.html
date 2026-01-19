@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Rimba Shelter</title>
+   <link rel="stylesheet" href="css/style-dashboard.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="logo">
+            <img src="gambar/logo-hitam.png" alt="Rimba Shelter Logo">
+        </div>
+
+        <div class="menu-title">Menu</div>
+        
+        <a href="dashboard-admin.html" class="menu-item active">Dashboard</a>
+        <a href="kelola.html" class="menu-item">Kelola Barang</a>
+        <a href="pesanan-masuk.html" class="menu-item">Pesanan masuk</a>
+    </div>
+
+    
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="dashboard-grid">
+           
+            <!-- Card Besar - Pendapatan -->
+            <div class="card-large">
+                <div class="card-header">
+                    <h2 class="card-title">Pendapatan</h2>
+                    <div class="icon-dollar">$</div>
+                </div>
+                
+                <div class="revenue-stats">
+                    <div class="stat-item">
+                        <div class="stat-label">Hari Ini</div>
+                        <div class="stat-value" id="pendapatan_hariini"></div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-label">Bulan Ini</div>
+                        <div class="stat-value" id="pendapatanBulanini">Rp 0</div>
+                    </div>
+                </div>
+            </div>
+           
+            <!-- Card Row -->
+            <div class="card-row">
+                <!-- Pesanan Hari Ini -->
+                <div class="card">
+                    <div class="card-icon">📦</div>
+                    <div class="card-subtitle">Pesanan Hari Ini</div>
+                    <div class="card-value" id="pesanan_hariini">0</div>
+                    <div class="card-description">Total pesanan masuk hari ini</div>
+                </div>
+
+                <!-- Produktivitas -->
+                <div class="card">
+                    <div class="card-icon">📊</div>
+                    <div class="card-subtitle">Produktivitas</div>
+                    <div class="card-value" id="productivity">0%</div>
+                    <div class="progress-container">
+                        <div class="progress-label">
+                            <span>Target Bulanan</span>
+                            <span id="targetProgress">0/100</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="progressFill" style="width: 0%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="gmbr">
+            <img class="gmbr-admin"src="gambar/admin-removebg-preview.png" alt="admingambar">
+        </div>
+
+        <footer id="contact" class="contact-section">
+            <h2>Contact Us</h2>
+            <div class="contact-grid">
+                <div class="contact-box">
+                    <h3>Rimba Shelter</h3>
+                    <p>Telepon:<br>0895-0120-7986</p>
+                </div>
+                <div class="contact-box">
+                    <h3>Lokasi :</h3>
+                    <p>Sindang, Kec. Cikijing,<br>Kabupaten Majalengka, Jawa<br>Barat 45466</p>
+                </div>
+    </div>
+    
+ 
+
+    <script src="js/scrpt-ashboard.js"></script>
+</body>
+</html>
