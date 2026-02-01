@@ -132,7 +132,11 @@ nav {
   }
   
 
+<<<<<<< HEAD
   /* modal pemesana */
+=======
+  
+>>>>>>> 2e36b8a0098651eddbfa1d5358010b8bbf3395cc
 .modal {
   display: none;
   position: fixed;
@@ -273,6 +277,7 @@ nav {
 }
 
 
+<<<<<<< HEAD
 
 
 /* struk */
@@ -304,6 +309,8 @@ nav {
 
 
 
+=======
+>>>>>>> 2e36b8a0098651eddbfa1d5358010b8bbf3395cc
   /* footer */
   .contact-section {
     padding: 100px 50px;

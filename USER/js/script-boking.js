@@ -1,5 +1,9 @@
 const products = [
+<<<<<<< HEAD
    
+=======
+    // Baris pertama (2 card besar)
+>>>>>>> 2e36b8a0098651eddbfa1d5358010b8bbf3395cc
     { 
         id: 1, 
         name: 'Tenda dom DL Kapasitas 4', 
@@ -16,6 +20,10 @@ const products = [
         stock: 8,
         row: 'first'
     },
+<<<<<<< HEAD
+=======
+    // Baris berikutnya (3 card per baris)
+>>>>>>> 2e36b8a0098651eddbfa1d5358010b8bbf3395cc
     { 
         id: 3, 
         name: 'Matras Spons', 
@@ -128,14 +136,22 @@ function formatPrice(price) {
     return 'Rp ' + price.toLocaleString('id-ID');
 }
 
+<<<<<<< HEAD
 // stock status class
+=======
+// Get stock status class
+>>>>>>> 2e36b8a0098651eddbfa1d5358010b8bbf3395cc
 function getStockClass(stock) {
     if (stock >= 10) return 'stock-available';
     if (stock >= 5) return 'stock-limited';
     return 'stock-low';
 }
 
+<<<<<<< HEAD
 // stock status text
+=======
+// Get stock status text
+>>>>>>> 2e36b8a0098651eddbfa1d5358010b8bbf3395cc
 function getStockText(stock) {
     if (stock >= 10) return `Tersedia: ${stock} unit`;
     if (stock >= 5) return `Tersedia: ${stock} unit (Terbatas)`;
@@ -202,19 +218,27 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Handle form submit
+<<<<<<< HEAD
 
 // Ganti fungsi handleSubmit yang ada dengan ini:
+=======
+>>>>>>> 2e36b8a0098651eddbfa1d5358010b8bbf3395cc
 function handleSubmit(e) {
     e.preventDefault();
     
     const jumlah = parseInt(document.getElementById('jumlah').value);
     
+<<<<<<< HEAD
     // Validasi stok
+=======
+    // Validasi stok sekali lagi sebelum submit
+>>>>>>> 2e36b8a0098651eddbfa1d5358010b8bbf3395cc
     if (jumlah > selectedProduct.stock) {
         alert(`Maaf, stok hanya tersedia ${selectedProduct.stock} unit`);
         return;
     }
     
+<<<<<<< HEAD
     // Hitung harga
     const sewaHari = parseInt(document.getElementById('sewaHari').value);
     const totalHarga = selectedProduct.price * jumlah * sewaHari;
@@ -280,6 +304,36 @@ document.getElementById('receiptModal').addEventListener('click', function(e) {
 
 
 
+=======
+    const orderData = {
+        produk: selectedProduct.name,
+        jumlah: jumlah,
+        sewaHari: document.getElementById('sewaHari').value,
+        totalHarga: document.getElementById('totalHarga').textContent,
+        nama: document.getElementById('nama').value,
+        telepon: document.getElementById('telepon').value,
+        tanggal: document.getElementById('tanggal').value,
+        metodePembayaran: document.getElementById('metodePembayaran').value
+    };
+
+    // Simpan data pesanan ke localStorage (opsional untuk digunakan di halaman pesanan)
+    let orders = JSON.parse(localStorage.getItem('orders') || '[]');
+    orders.push({
+        ...orderData,
+        id: Date.now(),
+        status: 'pending',
+        tanggalPesan: new Date().toLocaleDateString('id-ID')
+    });
+    localStorage.setItem('orders', JSON.stringify(orders));
+    
+    // Tampilkan notifikasi sukses
+    alert('Pesanan berhasil dibuat!');
+    
+    // Redirect ke halaman pesanan
+    window.location.href = 'pesanan.html';
+}
+
+>>>>>>> 2e36b8a0098651eddbfa1d5358010b8bbf3395cc
 // Close modal when clicking outside
 document.getElementById('orderModal').addEventListener('click', function(e) {
     if (e.target === this) {
