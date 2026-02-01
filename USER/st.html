@@ -1,0 +1,55 @@
+<!-- Modal Struk -->
+<div class="modal" id="receiptModal">
+    <div class="modal-content" style="max-width: 500px;">
+        <button class="btn-back" onclick="closeReceipt()">×</button>
+        
+        <div class="receipt-header">
+            <h3>Rimba Shelter</h3>
+            <p style="font-size: 12px; margin: 5px 0;">0895-0120-7986</p>
+            <hr style="border: 1px dashed #333; margin: 10px 0;">
+            <h2 style="text-align: center; margin: 15px 0;">PEMESANAN BERHASIL</h2>
+        </div>
+        
+        <div class="receipt-body">
+            <div class="receipt-row">
+                <span class="receipt-label">nama:</span>
+                <span class="receipt-value" id="rcptNama">-</span>
+            </div>
+            <div class="receipt-row">
+                <span class="receipt-label">barang:</span>
+                <span class="receipt-value" id="rcptBarang">-</span>
+            </div>
+            <div class="receipt-row">
+                <span class="receipt-label">jumlah:</span>
+                <span class="receipt-value" id="rcptJumlah">-</span>
+            </div>
+            <div class="receipt-row">
+                <span class="receipt-label">masa sewa:</span>
+                <span class="receipt-value" id="rcptMasaSewa">-</span>
+            </div>
+            <div class="receipt-row">
+                <span class="receipt-label">harga barang:</span>
+                <span class="receipt-value" id="rcptHargaBarang">-</span>
+            </div>
+            <div class="receipt-row">
+                <span class="receipt-label">total harga:</span>
+                <span class="receipt-value" id="rcptTotalHarga">-</span>
+            </div>
+            <div class="receipt-row">
+                <span class="receipt-label">metode pembayaran:</span>
+                <span class="receipt-value" id="rcptMetode">-</span>
+            </div>
+        </div>
+        
+        <hr style="border: 1px dashed #333; margin: 20px 0;">
+        
+        <div style="text-align: center; margin: 20px 0;">
+            <button class="btn-submit" onclick="printReceipt()" style="background: #4CAF50; margin-bottom: 10px;">CETAK STRUK</button>
+            <button class="btn-submit" onclick="closeReceipt()">OK</button>
+        </div>
+        
+        <div style="text-align: center; font-size: 12px; color: #666; margin-top: 20px;">
+            <p>Terima kasih telah berbelanja di Rimba Shelter</p>
+        </div>
+    </div>
+</div>

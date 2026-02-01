@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>deskripsi-booking</title>
+    <link rel="stylesheet" href="css/style-boking-tambahalat.css">
+
+</head>
+<body>
+    
+    <nav>
+        <div class="nav-links">
+            <a href="home.html">HOME</a>
+            <a href="Booking.html">Booking</a>
+            <a href="pesanan.html">Pesanan</a>
+            <a href="#contact">Contact us</a>
+        </div>
+        <a href="#login" class="login-btn">Login</a>
+    </nav>
+    
+    <div class="deskripsi-booking">
+        <p>
+            Rimba Shelter, Sewa alat camping yang menyediakan berbagai peralatan outdoor untuk mendaki gunung dan camping. 
+            Tenda, Sleeping Bag, Matras, Headlamp, Tas Gunung/Carrier, Lampu Tenda, Sepatu, Jaket, Tracking Pool, Kompor, 
+            Nesting/Cooking Set, dan lain-lain.
+        </p>
+</div>
+
+
+<div class="produk">
+  <h1 class="judul-produk">Pilih Barang Yang Ingin Anda Booking:</h1>
+
+    <!-- Baris pertama: 2 card -->
+    <div class="card-row" id="cardRow"></div>
+
+    <!-- Baris berikutnya: 3 card per baris -->
+    <div class="card-container" id="cardContainer"></div>
+</div>
+
+
+ <!-- jendela pemesanan -->
+ <div class="modal" id="orderModal">
+        <div class="modal-content">
+            <button class="btn-back" onclick="closeModal()">←</button>
+            
+            <div class="order-header">
+                <div class="order-image" id="modalImage"></div>
+                
+                <div class="order-details">
+                    <div class="order-label">Barang yang di pesan: <strong id="modalProductName">-</strong></div>
+                    
+                    <div class="stock-info" id="stockInfo">
+                        <span id="stockText">Tersedia: -</span>
+                    </div>
+                    
+                    <div class="order-field">
+                        <label>jumlah:</label>
+                        <input type="number" id="jumlah" value="1" min="1">
+                    </div>
+                    
+                    <div class="order-field">
+                        <label>sewa/hari:</label>
+                        <input type="number" id="sewaHari" value="1" min="1">
+                    </div>
+                    
+                    <div class="order-field">
+                        <label>total harga:</label>
+                        <span id="totalHarga" style="color: #c4d947; font-weight: bold; font-size: 18px;">Rp 0</span>
+                    </div>
+                </div>
+            </div>
+
+      <form onsubmit="handleSubmit(event)">
+          <div class="form-group">
+              <label>Nama:</label>
+              <input type="text" id="nama" required>
+          </div>
+
+          <div class="form-group">
+              <label>telepon/wa:</label>
+              <input type="tel" id="telepon" required>
+          </div>
+
+          <div class="form-group">
+              <label>untuk tgl:</label>
+              <input type="date" id="tanggal" required>
+          </div>
+
+          <div class="form-group">
+              <label>Metode Pembayaran:</label>
+                <select class="payment" id="metodePembayaran" name="payment">
+                <option value="bca">BCA</option>
+                <option value="dana">Dana</option>
+                <option value="ovo">OVO</option>
+                <option value="bri">BRI</option>
+                </select>
+            </div>
+
+          <button type="submit" class="btn-submit">bayar & booking</button>
+      </form>
+  </div>
+</div>
+
+<!-- Modal Struk -->
+<div class="modal" id="receiptModal">
+    <div class="modal-content" style="max-width: 500px;">
+        <div style="text-align: center; margin-bottom: 20px;">
+            <h2 style="color: #c4d947;">PEMESANAN BERHASIL</h2>
+        </div>
+        
+        <div class="receipt-body">
+            <div class="receipt-row">
+                <span class="receipt-label">nama:</span>
+                <span class="receipt-value" id="rcptNama">-</span>
+            </div>
+            <div class="receipt-row">
+                <span class="receipt-label">barang:</span>
+                <span class="receipt-value" id="rcptBarang">-</span>
+            </div>
+            <div class="receipt-row">
+                <span class="receipt-label">jumlah:</span>
+                <span class="receipt-value" id="rcptJumlah">-</span>
+            </div>
+            <div class="receipt-row">
+                <span class="receipt-label">masa sewa:</span>
+                <span class="receipt-value" id="rcptMasaSewa">-</span>
+            </div>
+            <div class="receipt-row">
+                <span class="receipt-label">harga barang:</span>
+                <span class="receipt-value" id="rcptHargaBarang">-</span>
+            </div>
+            <div class="receipt-row">
+                <span class="receipt-label">total harga:</span>
+                <span class="receipt-value" id="rcptTotalHarga">-</span>
+            </div>
+            <div class="receipt-row">
+                <span class="receipt-label">metode pembayaran:</span>
+                <span class="receipt-value" id="rcptMetode">-</span>
+            </div>
+        </div>
+        
+        <div style="text-align: center; margin: 30px 0;">
+                <button class="btn-submit" onclick="window.location.href='pesanan.html'" style="width: 150px;">OK</button>  
+        </div>
+    </div>
+</div> 
+
+
+<script src="js/script-boking.js"></script>
+</body>
+<footer id="contact" class="contact-section">
+  <h2>Contact Us</h2>
+  <div class="contact-grid">
+      <div class="contact-box">
+          <h3>Rimba Shelter</h3>
+          <p>Telepon:<br>0895-0120-7986</p>
+      </div>
+      <div class="contact-box">
+          <h3>Lokasi :</h3>
+          <p>Sindang, Kec. Cikijing,<br>Kabupaten Majalengka, Jawa<br>Barat 45466</p>
+      </div>
+  </div>
+</footer>
+</html>

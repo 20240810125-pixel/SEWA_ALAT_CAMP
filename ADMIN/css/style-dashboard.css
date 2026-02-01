@@ -1,0 +1,265 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: #1f1d1d;  /* biar elemen default ke bawah */
+}
+
+
+
+
+.wrapper {
+    display: flex;          /* sidebar di kiri, konten di kanan */
+    min-height: 100vh;      /* penuh tinggi layar */
+}
+
+/* Sidebar fixed */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100vh;
+    background: #b8b8b8;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+}
+
+/* Konten bergeser ke kanan */
+
+
+
+.logo {
+    padding: 0 20px 30px;
+    text-align: center;
+}
+
+.logo img {
+    width: 120px;
+    height: auto;
+}
+
+.menu-title {
+    padding: 20px;
+    font-size: 14px;
+    color: #666;
+    font-weight: bold;
+}
+
+.menu-item {
+    padding: 15px 30px;
+    color: #333;
+    text-decoration: none;
+    display: block;
+    transition: background 0.3s;
+    font-size: 16px;
+}
+
+.menu-item:hover {
+    background: #a0a0a0;
+}
+
+.menu-item.active {
+    background: #909090;
+    font-weight: bold;
+}
+
+/* Main Content */
+
+.main-content {
+    align-items: center;
+    margin-left: 250px;     /* geser sesuai lebar sidebar */
+    padding: 40px;
+    min-height: 100vh;
+    overflow-y: auto;       /* konten bisa scroll ke bawah */
+    background: #1f1d1d;
+}
+
+
+/* Dashboard Grid */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 1200px;
+    align-items: center;
+}
+
+/* Card Besar - Pendapatan */
+.card-large {
+    background: #c4c4c4;
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
+.card-title {
+    font-size: 24px;
+    color: #333;
+    font-weight: bold;
+}
+
+.icon-dollar {
+    width: 50px;
+    height: 50px;
+    background: #2c5f2d;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    color: white;
+    font-weight: bold;
+}
+
+.revenue-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-label {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.stat-value {
+    font-size: 36px;
+    color: #2c5f2d;
+    font-weight: bold;
+}
+
+
+.gmbr-admin {
+   margin-top: 100px;
+}
+
+
+/* Card Row - 2 Cards */
+.card-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.card {
+    background: #c4c4c4;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.card-icon {
+    width: 50px;
+    height: 50px;
+    background: #2c5f2d;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.card-subtitle {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.card-value {
+    font-size: 48px;
+    color: #2c5f2d;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card-description {
+    font-size: 14px;
+    color: #888;
+}
+
+/* Progress Bar untuk Produktivitas */
+.progress-container {
+    margin-top: 20px;
+}
+
+.progress-label {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #666;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 20px;
+    background: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #2c5f2d, #4a9d4d);
+    transition: width 0.3s ease;
+}
+
+.gmbr {
+    text-align: center;   /* isi div diarahkan ke tengah */
+    margin-top: 20px;     /* jarak dari atas */
+}
+
+
+
+/* Contact Section */
+.contact-section {
+    padding: 100px 50px;
+    background: #222;
+}
+
+.contact-section h2 {
+    font-size: 32px;
+    margin-bottom: 50px;
+    border-bottom: 2px solid #c4d82e;
+    padding-bottom: 20px;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    max-width: 1200px;
+}
+
+.contact-box h3,h2 {
+    color: white;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.contact-box p {
+    color: white;
+    font-size: 16px;
+    line-height: 1.8;
+}
